@@ -7,6 +7,7 @@ import pro.sky.java.course2.shopping_basket.services.ShoppingBasketService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @SessionScope
@@ -18,8 +19,11 @@ public class ShoppingBasketServiceImpl implements ShoppingBasketService {
     }
 
     @Override
-    public void addProduct(int productId) {
-        products.add(new Product(productId));
+    public void addProduct(List<Integer> ids) {
+        products.addAll(
+                ids.stream()
+                        .map(Product::new)
+                        .collect(Collectors.toList()));
     }
 
     @Override

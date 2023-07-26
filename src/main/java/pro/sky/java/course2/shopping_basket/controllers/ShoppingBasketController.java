@@ -19,9 +19,9 @@ public class ShoppingBasketController {
     }
 
     @GetMapping("/add")
-    public String addProduct(@RequestParam("id") int productId) {
-        shoppingBasketService.addProduct(productId);
-        return "Товар №" + productId + " добавлен";
+    public String addProduct(@RequestParam("ids") List<Integer> ids) {
+        shoppingBasketService.addProduct(ids);
+        return "Товары №" + ids + " добавлен";
     }
 
     @GetMapping("/get")
