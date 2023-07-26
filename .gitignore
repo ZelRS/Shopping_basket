@@ -36,4 +36,4 @@ build/
 /mvnw
 /.mvn/wrapper/maven-wrapper.properties
 /.mvn/wrapper/maven-wrapper.jar
-/src/main/resources/application.properties
+/src/test/java/pro/sky/java/course2/shopping_basket/ProductApplicationTests.java
